@@ -1,3 +1,6 @@
+# repo and dev environment specific
+.vscode
+
 # Binaries for programs and plugins
 *.exe
 *.exe~
