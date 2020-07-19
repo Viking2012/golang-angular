@@ -6,6 +6,10 @@ import { HomeComponent } from './home/home.component';
 import { TodoComponent } from './todo/todo.component';
 import { CallbackComponent } from './callback/callback.component';
 
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptor } from './token.interceptor'
+import { Token } from '@angular/compiler/src/ml_parser/lexer';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +20,11 @@ import { CallbackComponent } from './callback/callback.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
