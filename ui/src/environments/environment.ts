@@ -6,6 +6,9 @@ export const environment = {
   production: false,
   gateway: 'http://localhost:3000',
   callback: 'http://localhost:4200/callback',
+  domain:'https://dev-h3ku2y7p.us.auth0.com',
+  clientId:'5f0cf842dcf37e0031b5ac92',
+  audience:'https://my-golang-api'
 };
 
 /*
