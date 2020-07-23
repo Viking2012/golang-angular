@@ -29,7 +29,7 @@ export class HerosComponent implements OnInit {
   }
 
   getHeros(): void {
-    this.heros = this.heroService.getHeros();
+    this.heroService.getHeros().subscribe(heros => this.heros = heros);
   }
 
 }
